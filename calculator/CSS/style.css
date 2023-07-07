@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #505050;
+}
+
+.wrapper-all{
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    width: 2.3em;
+    height: 2.3em;
+    font-size: 1.6em;
+    border: none;
+    border-radius: 2em;
+    margin:0.3em;
+
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.button-zerro{
+width: 5.4em;
+}
+
+.wrapper{
+   margin-top: 1em;
+    background-color: black;
+    border-radius: 1em;
+    padding: 1em;
+    width: 20em;
+}
+
+.orange{
+    background-color: #FF9500;
+    color: white;
+}
+
+.gray{
+    background-color: #505050;
+    color: white;
+}
+
+hr{
+    width: 19em;
+}
+.result{
+    padding-top: 0.5em;
+    color: white;
+    width: 9.4em;
+    margin: 0.2em;
+    height: 60px;
+    display: flex;
+    justify-content: flex-end;
+    font-size:2.0em;
+   
+}
+
