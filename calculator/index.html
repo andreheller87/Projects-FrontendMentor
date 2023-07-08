@@ -7,18 +7,20 @@
     <script defer src="./JS/calculator.js"></script>
     <title>Calculator</title>
 </head>
-<body>
+<body >
 
     <div class="wrapper-all">
   
         <div class="wrapper">
+         <hr>
         <p class="result" id="result"></p>
+        
         <hr>
-        <hr>
-          <button onclick="clean()">AC</button>
+          <button onclick="cleanAll()">AC</button>
+          <button onclick="clean()">C</button>
           <button onclick="changeSign()">+/-</button>
-          <button onclick="percent('%')">%</button>
-          <button class="orange" onclick="operator('/')" >
+         
+          <button class="color-operator" onclick="operator('/')" >
             /
           </button>
           <button class="gray" onclick="insert('7')" >
@@ -30,8 +32,8 @@
           <button class="gray" onclick="insert('9')" >
             9
           </button>
-          <button class="orange" onclick="operator('*')" >
-            X
+          <button class="color-operator" onclick="operator('*')" >
+            *
           </button>
           <button class="gray" onclick="insert('4')" >
             4
@@ -42,7 +44,7 @@
           <button class="gray"onclick="insert('6')" >
             6
           </button>
-          <button class="orange" onclick="operator('-')" >
+          <button class="color-operator" onclick="operator('-')" >
             -
           </button>
           <button class="gray" onclick="insert('1')" >
@@ -54,7 +56,7 @@
           <button class="gray" onclick="insert('3')" >
             3
           </button>
-          <button class="orange" onclick="operator('+')" >
+          <button class="color-operator" onclick="operator('+')" >
             +
           </button>
           <button class="gray button-zerro" onclick="insert('0')" >
@@ -64,7 +66,7 @@
             .
           </button>
           
-          <button class="orange" onclick="calc()">
+          <button class="color-operator" onclick="calc()">
             =
           </button>
         </div>
@@ -72,4 +74,6 @@
     </div>
     
 </body>
+
+
 </html>

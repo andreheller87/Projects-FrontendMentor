@@ -1,25 +1,34 @@
 
 
+
 function insert(num){
- var numb = document.getElementById('result').innerHTML;
- 
- if (num === "." && numb.includes(".")) {
+ var numberResult = document.getElementById('result').innerHTML;
+
+
+ console.log(numberResult.length)
+
+ if (num === "." && numberResult.includes(".")) {
     return; 
 }
- if(numb.length < 18){
-    document.getElementById('result').innerHTML = numb + num
- }
+
+ document.getElementById('result').innerHTML = numberResult + num
+   
  
 }
 
-function clean(){
+function cleanAll(){
       document.getElementById('result').innerHTML = " ";
+   }
+
+   function clean(){
+      var resultClean =document.getElementById('result').innerHTML;
+      document.getElementById('result').innerHTML = resultClean.substring(0,resultClean.length-1);
    }
 
 
    function changeSign(){
-    var numb = document.getElementById('result').innerHTML;
-    document.getElementById('result').innerHTML = -numb 
+    var numberResultChange = document.getElementById('result').innerHTML;
+    document.getElementById('result').innerHTML = -numberResultChange
  }
  var oldnumb ;
  var operatorinput;

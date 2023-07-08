@@ -1,64 +1,79 @@
-*{
+* {
     margin: 0;
     padding: 0;
-}
-body{
-    background-color: #505050;
+
 }
 
-.wrapper-all{
+body {
+    background-color: ;
+    background-image: linear-gradient(to top, white,#505050);
+    background-size: 100% 200%;
+}
+
+.wrapper-all {
     display: flex;
     justify-content: center;
 }
 
-button{
-    width: 2.3em;
-    height: 2.3em;
+button {
+    width: 2.8em;
+    height: 2.8em;
     font-size: 1.6em;
     border: none;
-    border-radius: 2em;
-    margin:0.3em;
+    font-weight: 600;
+    margin: 0.1em;
+    margin-bottom: 0.2em;
 
 }
 
-button:hover{
+button:hover {
     cursor: pointer;
 }
 
-.button-zerro{
-width: 5.4em;
+.button-zerro {
+    width: 5.95em;
 }
 
-.wrapper{
-   margin-top: 1em;
+.wrapper {
+    margin-top: 1em;
     background-color: black;
     border-radius: 1em;
     padding: 1em;
     width: 20em;
+
 }
 
-.orange{
-    background-color: #FF9500;
+.color-operator {
+    background-color: #3cff00;
     color: white;
 }
 
-.gray{
+.gray {
     background-color: #505050;
     color: white;
 }
 
-hr{
-    width: 19em;
-}
-.result{
-    padding-top: 0.5em;
-    color: white;
-    width: 9.4em;
-    margin: 0.2em;
-    height: 60px;
-    display: flex;
-    justify-content: flex-end;
-    font-size:2.0em;
-   
+hr {
+    width: 99%;
+    margin-bottom: 1em;
 }
 
+.result {
+    padding-top: 0.3em;
+    color: black;
+    width: 9.4em;
+    margin: 0.2em;
+    padding-right: 0.3em;
+    min-width: 10.3em;
+    min-height: 2.3em;
+    font-size: 1.8em;
+    overflow: hidden;
+    word-wrap: break-word;
+    display: block;
+    text-align: right;
+    font-weight: bold;
+    border-radius: 10px;
+    background-image: linear-gradient(to top, white, #3cff00);
+    background-size: 10% 200%;
+
+}
