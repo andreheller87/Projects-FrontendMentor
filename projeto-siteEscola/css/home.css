@@ -13,7 +13,7 @@ body{
 
 header, nav, main, aside, footer{
   display: flex;
-  background-color: #a1a1a1;
+  background-color: white;
   margin: 1px;
 }
 
@@ -34,7 +34,7 @@ header img{
 
 header h1 {
   flex: 1;
-  color: white;
+  color: black;
   font-size: 32px;
   text-align: center;
   margin-right: 10em;
@@ -47,7 +47,7 @@ height: 30px;
 align-items: center;
 padding-left: 3em;
 padding-right: 3em;
-background-color: black;
+background-color: #165cdf;
 
 }
 
@@ -76,7 +76,7 @@ h2{
   margin-top: 2em;
   text-align: center;
  margin-right: 5em;
-  color: white;
+  color: black;
   font-weight: bold;
   font-size: 20pt;
 }
@@ -110,7 +110,7 @@ background-color: #165cdf;
 nav a{
   text-decoration: none;
   cursor: pointer;
-  color:white;
+  color:black;
   margin: 5%;
   font-size: 17pt;
 }
