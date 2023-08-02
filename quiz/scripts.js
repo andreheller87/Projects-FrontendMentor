@@ -1,4 +1,9 @@
-const questions = [
+const capitais = [
+  {
+    question: "Qual é a capital do México?",
+    choices: ["Guadalajara", "Monterrey", "Cidade do México", "Puebla"],
+    answer: "Cidade do México",
+  },
     {
       question: "Qual é a capital do Brasil?",
       choices: ["Brasília", "Rio de Janeiro", "São Paulo", "Salvador"],
@@ -39,7 +44,15 @@ const questions = [
       choices: ["Liverpool", "Manchester", "Edimburgo", "Londres"],
       answer: "Londres",
     },
+    {
+      question: "Qual é a capital do Japão",
+      choices: ["Osaka", "Tóquio", "Kyoto", "Yokohama"],
+      answer: "Tóquio",
+    },
+  
   ];
+
+  const questions = capitais;
   
   const questionElement = document.getElementById("question");
   const choiceElements = Array.from(document.getElementsByClassName("choice"));
