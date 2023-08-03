@@ -1,55 +1,63 @@
-const capitais = [
+const javaScript = [
   {
-    question: "Qual é a capital do México?",
-    choices: ["Guadalajara", "Monterrey", "Cidade do México", "Puebla"],
-    answer: "Cidade do México",
-  },
-  {
-    question: "Qual é a capital do Brasil?",
-    choices: ["Brasília", "Rio de Janeiro", "São Paulo", "Salvador"],
-    answer: "Brasília",
-  },
-  {
-    question: "Qual é a capital da Argentina?",
-    choices: ["Buenos Aires", "Brasília", "Lisboa", "Paris"],
-    answer: "Buenos Aires",
-  },
-  {
-    question: "Qual é a capital da França?",
-    choices: ["Roma", "Madri", "Paris", "Londres"],
-    answer: "Paris",
-  },
-  {
-    question: "Qual é a capital da Espanha?",
-    choices: ["Lisboa", "Madri", "Barcelona", "Valência"],
-    answer: "Madri",
-  },
-  {
-    question: "Qual é a capital da Itália?",
-    choices: ["Veneza", "Milão", "Roma", "Nápoles"],
-    answer: "Roma",
-  },
-  {
-    question: "Qual é a capital do Canadá?",
-    choices: ["Toronto", "Vancouver", "Ottawa", "Montreal"],
-    answer: "Ottawa",
-  },
-  {
-    question: "Qual é a capital dos Estados Unidos?",
-    choices: ["Nova York", "Los Angeles", "Chicago", "Washington D.C."],
-    answer: "Washington D.C.",
-  },
-  {
-    question: "Qual é a capital do Reino Unido?",
-    choices: ["Liverpool", "Manchester", "Edimburgo", "Londres"],
-    answer: "Londres",
-  },
-  {
-    question: "Qual é a capital do Japão",
-    choices: ["Osaka", "Tóquio", "Kyoto", "Yokohama"],
-    answer: "Tóquio",
+    question: "Qual dos seguintes é um método de array em JavaScript que retorna a quantidade de elementos do array?",
+    choices: ["count()", "size()", "length()", "sizeOf()"],
+    answer: "length()",
   },
 
+  {
+    question: "Qual dos seguintes métodos de string em JavaScript é usado para transformar uma string em letras minúsculas?",
+    choices: ["toLowerCase()", "toLower()", "lowerCase()", "convertToLower()"],
+    answer: "toLowerCase()",
+  },
+
+  {
+    question: "Qual é a forma correta de criar uma variável em JavaScript?",
+    choices: ["let myVar = 10;", "myVar = 10;", "int myVar = 10;", "variable myVar = 10;"],
+    answer: "let myVar = 10;",
+  },
+
+  {
+    question: "Qual dos seguintes é um operador de comparação em JavaScript que verifica igualdade de valor e tipo?",
+    choices: ["===", "==", "=", "!=="],
+    answer: "===",
+  },
+
+  {
+    question: "Qual é a função utilizada para exibir uma caixa de diálogo com uma mensagem em JavaScript?",
+    choices: ["dialog()", "popup()", "alert()", "message()"],
+    answer: "alert()",
+  },
+
+  {
+    question: "Em JavaScript, qual estrutura de controle é utilizada para executar um bloco de código repetidamente enquanto uma condição for verdadeira?",
+    choices: ["if", "for", "while", "switch"],
+    answer: "while",
+  },
+
+  {
+    question: "O que a função `parseInt()` faz em JavaScript?",
+    choices: ["Converte um valor para inteiro", "Verifica se um valor é do tipo inteiro", "Arredonda um valor para o inteiro mais próximo", "Converte um valor para número decimal"],
+    answer: "Converte um valor para inteiro",
+  },
+
+  {
+    question: "Qual método de array é usado para adicionar um ou mais elementos ao final do array em JavaScript?",
+    choices: ["push()", "add()", "insert()", "append()"],
+    answer: "push()",
+  },
+
+  {
+    question: "Como se declara uma função em JavaScript?",
+    choices: ["function minhaFuncao() {}", "minhaFuncao() {}", "funcao minhaFuncao() {}", "def minhaFuncao() {}"],
+    answer: "function minhaFuncao() {}",
+  },
+
+  {
+    question: "Qual é o resultado da expressão: 10 % 3?",
+    choices: ["1", "3", "0", "2"],
+    answer: "1",
+  },
 ];
 
 const java = [
@@ -117,7 +125,7 @@ const java = [
 const questions = [];
 
 document.getElementById("choicesQuestion1").addEventListener("click", function () {
-  changeQuestionList(capitais);
+  changeQuestionList(javaScript);
 });
 
 document.getElementById("choicesQuestion2").addEventListener("click", function () {
@@ -153,23 +161,27 @@ function loadQuestion() {
   for (let i = 0; i < choiceElements.length; i++) {
     choiceElements[i].innerText = choices[i];
   }
-  answerChosen = false; // reset flag when loading new question
+  answerChosen = false; 
 }
 
 function checkAnswer(e) {
-  if (answerChosen) return; // prevent multiple answers
+  if (answerChosen) return; 
   answerChosen = true;
 
   if (e.target.innerText === questions[currentQuestion].answer) {
     score++;
     scoreElement.innerText = "Pontuação: " + score;
+    
     alert("Correto!");
+    loadNextQuestion();
   } else {
     wrong++;
     wrongElement.innerText = "Erros: " + wrong;
     alert(
       "Errado! A resposta correta é " + questions[currentQuestion].answer + "."
-    );
+    )
+    loadNextQuestion();
+    ;
   }
 }
 
@@ -186,12 +198,7 @@ function restartQuiz() {
   loadQuestion();
 }
 
-nextButton.addEventListener("click", () => {
-  if (!answerChosen) {
-    alert("Por favor, escolha uma resposta antes de prosseguir.");
-    return;
-  }
-
+function loadNextQuestion() {
   currentQuestion++;
 
   if (currentQuestion < questions.length) {
@@ -206,7 +213,8 @@ nextButton.addEventListener("click", () => {
     );
     restartQuiz();
   }
-});
+}
+
 
 function shuffleArray(array) {
   let currentIndex = array.length,
